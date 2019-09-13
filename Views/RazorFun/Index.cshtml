@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <style>
+        h1{
+            margin-top:60px;
+            text-align:center;
+        }
+        var{
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Here are some delicious foods!</h1>
+    @{
+        var StringList = new List<string>
+            {
+                "Apple Pie",
+                "Burritos",
+                "Clams Casino",
+                "Donuts"
+            };
+
+        foreach(var word in StringList)
+        {
+            if(word[0]=="C"[0])
+            {
+                <p style = "color: red">@word</p>
+            }
+            else
+            {
+                <p>@word </p>
+            }
+        }
+    }
+</body>
+</html>
